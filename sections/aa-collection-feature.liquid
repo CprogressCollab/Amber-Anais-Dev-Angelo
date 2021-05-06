@@ -1,0 +1,165 @@
+<section class="collection-feature">
+		<div class="container cw-1200">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="col-cont righ-cont__col">
+						<div class="col-long bg-cover col-cont__child" style="background-image: url('{{section.settings.img_bg | img_url: 'x1000'}}')">
+
+							<div class="valign">
+								<div class="overlay"></div>
+								<div class="inner">
+									<h3 class="title">{{section.settings.collection_title}}</h3>
+									<a href="{{section.settings.button_url}}">{{section.settings.button_name}}</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-short bg-cover col-cont__child" style="background-image: url('{{section.settings.img_bg2 | img_url: 'x1000'}}')">
+							
+							<div class="valign">
+								<div class="overlay"></div>
+								<div class="inner">
+									<h3 class="title">{{section.settings.collection_title2}}</h3>
+									<a href="{{section.settings.button_url2}}">{{section.settings.button_name2}}</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="col-cont left-cont__col">
+						<div class="col-short bg-cover col-cont__child" style="background-image: url('{{section.settings.img_bg3 | img_url: 'x1000'}}')">
+							<div class="valign">
+								<div class="overlay"></div>
+								<div class="inner">
+									<h3 class="title">{{section.settings.collection_title3}}</h3>
+									<a href="{{section.settings.button_url3}}">{{section.settings.button_name3}}</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-long bg-cover col-cont__child" style="background-image: url('{{section.settings.img_bg4 | img_url: 'x1000'}}')">
+							<div class="valign">
+								<div class="overlay"></div>
+								<div class="inner">
+									<h3 class="title">{{section.settings.collection_title4}}</h3>
+									<a href="{{section.settings.button_url4}}">{{section.settings.button_name4}}</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+{% schema %}
+  {
+    "name": "Collection Feature",
+    "settings":
+	
+	[
+	
+	{
+        "id": "img_bg",
+        "type": "image_picker",
+        "label": "Background Image Big Right"
+      },
+	{
+        "id": "collection_title",
+        "type": "text",
+        "label": "Collection Title"
+    },
+	{
+        "id": "button_name",
+        "type": "text",
+        "label": "Button Placeholder"
+    },
+	{
+        "id": "button_url",
+        "type": "url",
+        "label": "Button URL"
+    },
+
+
+	
+	{
+        "id": "img_bg2",
+        "type": "image_picker",
+        "label": "Background Image Small Right"
+      },
+	{
+        "id": "collection_title2",
+        "type": "text",
+        "label": "Collection Title"
+    },
+	{
+        "id": "button_name2",
+        "type": "text",
+        "label": "Button Placeholder"
+    },
+	{
+        "id": "button_url2",
+        "type": "url",
+        "label": "Button URL"
+    },
+
+	
+	{
+        "id": "img_bg3",
+        "type": "image_picker",
+        "label": "Background Image Small Left"
+      },
+	{
+        "id": "collection_title3",
+        "type": "text",
+        "label": "Collection Title"
+    },
+	{
+        "id": "button_name3",
+        "type": "text",
+        "label": "Button Placeholder"
+    },
+	{
+        "id": "button_url3",
+        "type": "url",
+        "label": "Button URL"
+    },
+
+
+
+	{
+        "id": "img_bg4",
+        "type": "image_picker",
+        "label": "Background Image Small Left"
+      },
+	{
+        "id": "collection_title4",
+        "type": "text",
+        "label": "Collection Title"
+    },
+	{
+        "id": "button_name4",
+        "type": "text",
+        "label": "Button Placeholder"
+    },
+	{
+        "id": "button_url4",
+        "type": "url",
+        "label": "Button URL"
+    }
+
+	
+	],
+	"presets": [
+		{
+			"name": "Collection Feature",
+			"category": "Home Sections"
+		}
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

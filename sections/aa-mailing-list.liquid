@@ -1,0 +1,50 @@
+<section class="mailing-list">
+		<div class="container">
+			<div class="email-cont">
+				<h2 class="title">{{section.settings.mail_title}}</h2>
+				<p class="subtitle">{{section.settings.mail_subtitle}}</p>
+				<div class="form">
+					<form action="">
+						<input type="text" placeholder="Enter your email address...">
+						<input class="btn-hover" type="submit" value="{{section.settings.mail_submit}}">
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+{% schema %}
+  {
+    "name": "Mailing list",
+    "settings": [
+
+		{
+            "id": "mail_title",
+            "type": "text",
+            "label": "Mailing Title"
+          },
+		{
+            "id": "mail_subtitle",
+            "type": "text",
+            "label": "Mailing Subtitle"
+          },
+			{
+            "id": "mail_submit",
+            "type": "text",
+            "label": "Mailing Submit"
+          }
+
+	],
+	"presets": [
+		{
+			"name": "Mailing list",
+			"category": "Home Sections"
+		}
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

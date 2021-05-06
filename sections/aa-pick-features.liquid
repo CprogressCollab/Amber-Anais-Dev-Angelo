@@ -1,0 +1,56 @@
+<section class="picks-feature">
+  <h3 class="title">Amber's Picks</h3>
+		<div class="product-carousel owl-carousel homeRangesCollections owl-loaded owl-drag">
+			
+           {% for block in section.blocks %}
+
+    {% assign product_item = all_products[block.settings.product] %}
+
+			<div class="item">
+              <a href="{{ product_item.url }}">
+              <div class="img-holder bg-cover bg-contain" style="background-image: url('{{ product_item.images[0]  | product_img_url: "x1000"}}')">
+					
+				</div>
+				<p class="product-title">{{ product_item.title }}</p>
+				<p class="product-price">{{ product_item.price | money }}</p>
+              </a>
+				
+			</div>
+          {% endfor %}
+		
+		</div>
+
+	</section>
+{% schema %}
+  {
+    "name": "Pick Features",
+    "settings": [],
+
+  "name": "Feature Pick",
+  "blocks": [
+    {
+      "type": "new-arrival",
+      "name": "Feature Pick",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product"
+        }
+      ]
+    }
+  ],
+	"presets": [
+		{
+			"name": "Pick Features",
+			"category": "Home Sections"
+		}
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

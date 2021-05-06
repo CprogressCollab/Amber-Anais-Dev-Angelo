@@ -1,0 +1,40 @@
+<section class="hashtag">
+	<div class="container">
+		<div class="title-wrap">
+			<div class="title-wrap__title">
+				<h3><a href="https://www.instagram.com/amber_anais_interiors/">{{ section.settings.hastag_title}}</a></h3>
+			</div>
+			<div class="title-wrap__text">
+				{{ section.settings.hastag_richtext}}
+			</div>
+		</div>
+	</div>
+</section>
+{% schema %}
+  {
+    "name": "Hashtag",
+    "settings": [
+    	{
+            "id": "hastag_title",
+            "type": "text",
+            "label": "Header Title"
+          },{
+            "id": "hastag_richtext",
+            "type": "richtext",
+            "label": "Richtext"
+          }
+    ],
+	"presets": [
+		{
+			"name": "Hashtag",
+			"category": "Home Sections"
+		}
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,42 @@
+<section class="small-images">
+		<div class="image-carousel owl-carousel homeRangesCollections owl-loaded owl-drag">
+			{%for block in section.blocks%}	
+			<div class="item">
+				<img src="{{block.settings.image | img_url: '700x700'}}" alt="">
+			</div>
+			
+           {%endfor%}
+			
+		</div>
+	</section>
+{% schema %}
+  {
+    "name": "Small Images",
+    "settings": [],
+"blocks": [
+      {
+        "type": "small_image",
+        "name": "Small Image",
+        "settings": [
+          	{
+            "id": "image",
+            "type": "image_picker",
+            "label": "Image Feature"
+          }
+        ]
+      }
+	],
+	"presets": [
+		{
+			"name": "Small Images",
+			"category": "Home Sections"
+		}
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

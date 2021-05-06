@@ -1,0 +1,101 @@
+<section class="home-banner">
+		<div id="home-banner" class="banner-carousel owl-carousel">	
+          {% for block in section.blocks %}
+			<div class="item bg-image" style="background-image:url({{ block.settings.img_url  | img_url: "x1000"}})">	
+				<div class="overlay"></div>
+				<div class="valign">
+					<div class="inner">
+						<div class="container cw-1560">
+							<div class="the-content">
+								<p class="title">
+									{{block.settings.title_banner}}
+								</p>
+								<p class="description">
+									
+                                  {{block.settings.desc_banner}}
+								</p>
+								<a href="{{block.settings.button_banne_url}}" class="btn-black btn-hover">
+                                  {{block.settings.button_banner}}
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+          {%endfor%}
+			<div class="item bg-image" style="background-image:url(https://cdn.shopify.com/s/files/1/0556/1774/9162/files/Amber-Anais-Interiors-Slider_7b07b702-85ad-49c1-a1c6-09c2da5e5ace.png?v=1617275834)">	
+				<div class="overlay"></div>
+				<div class="valign">
+					<div class="inner">
+						<div class="container cw-1560">
+							<div class="the-content">
+								<p class="title">
+									New Season Kitchen &amp; Dining
+								</p>
+								<p class="description">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc magna turpis, fermentum vitae pretium in.
+								</p>
+								<a href="#" class="btn-black">
+									Shop now
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+{% schema %}
+  {
+    "name": "Banner",
+    "settings": [],
+"blocks": [
+{
+			"type": "banner_block",
+			"name": "Banner Block",
+			"settings": [
+				{
+					"id": "img_url",
+					"type": "image_picker",
+					"label": "Banner Background Image"
+				},
+				
+				{
+					"id": "title_banner",
+					"type": "text",
+					"label": "Banner Title"
+				},
+				{
+					"id": "desc_banner",
+					"type": "text",
+					"label": "Description"
+				},
+				{
+					"id": "button_banner",
+					"type": "text",
+					"label": "Button text"
+				},
+				{
+					"id": "button_banne_url",
+					"type": "url",
+					"label": "Button Url"
+				}
+				
+			]
+		}],
+	"presets": [
+		{
+			"name": "Banner",
+			"category": "Home Sections"
+		}
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
